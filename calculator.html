@@ -30,137 +30,233 @@
     </script>
 </head>
 <body>
-<div style="display: flex;">
-    <div>
-        <div id="tabs">
-            <ul>
-                <li><a class="tabss" id="tab1" href="#tabs-1">Одностворчатое</a></li>
-                <li><a class="tabss" id="tab2" href="#tabs-2">Двухстворчатое</a></li>
-                <li><a class="tabss" id="tab3" href="#tabs-3">Трехстворчатое</a></li>
-            </ul>
-            <div id="tabs-1">
-                <div class="brand-wrap">
-                    <div class="brand">
-                        <label for="1stv_gl">Одностворчатое глухое</label>
-                        <input type="radio" name="brand" id="1stv_gl" data-background-color="#0769AD"
-                               data-color="#7ACEF4"
-                               data-background-image="url(images/jquery.png)">
-                        <label for="1stv_pov">Одностворчатое поворотное</label>
-                        <input type="radio" name="brand" id="1stv_pov" data-background-color="#B24926"
-                               data-color="#FAA523"
-                               data-background-image="url(images/jquery-ui.png)">
-                        <label for="1stv_pov_otk">Одностворчатое поворотно-откидное</label>
-                        <input type="radio" name="brand" id="1stv_pov_otk" data-background-color="#108040"
-                               data-color="#3EB249"
-                               data-background-image="url(images/jquery-mobile.png)">
+<section class="calculator">
+    <div class="container max-calc-width">
+        <div id="main-calc-div" class="max-calc-width">
+            <div id="tabs">
+                <span class="calc-title">Выбор окна:</span>
+                <ul class="max-calc-width">
+                    <li><a class="tabss" id="1stv_tab" href="http://superokna.by/klientam/#1stv">Одностворчатое</a></li>
+                    <li><a class="tabss" id="2stv_tab" href="#2stv">Двухстворчатое</a></li>
+                    <li><a class="tabss" id="3stv_tab" href="http://superokna.by/klientam/#3stv">Трехстворчатое</a></li>
+                    <li><a class="tabss" id="b_bl_tab" href="http://superokna.by/klientam/#b_bl">Балконный блок</a></li>
+                </ul>
+                <div id="left_sidebar">
+                    <div>
+                       <div id="1stv">
+                            <div class="brand-wrap">
+                                <div class="brand">
+                                    <label for="1stv_gl">Одностворчатое глухое</label>
+                                    <input type="radio" name="brand" id="1stv_gl" data-img='1stv_gl.jpg' data-stv-count=0 checked>
+                                    <label for="1stv_pov">Одностворчатое поворотное</label>
+                                    <input type="radio" name="brand" id="1stv_pov" data-img='1stv_pov.jpg' data-stv-count=1>
+                                    <label for="1stv_pov_otk">Одностворчатое поворотно-откидное</label>
+                                    <input type="radio" name="brand" id="1stv_pov_otk" data-img='1stv_pov_otk.jpg' data-stv-count=2>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="2stv">
+                            <div class="brand-wrap">
+                                <div class="brand">
+                                    <label for="2stv_gl">Двухстворчатое глухое</label>
+                                    <input type="radio" name="brand" id="2stv_gl" data-img='2stv_gl.jpg' data-stv-count=0>
+                                    <label for="2stv_1pov_otk">Двухстворчатое с одной поворотно-откидной</label>
+                                    <input type="radio" name="brand" id="2stv_1pov_otk" data-img='2stv_1pov_otk.jpg' data-stv-count=2>
+                                    <label for="2stv_1pov_1pov_otk">Двухстворчатое с одной поворотно-откидной и одной
+                                        поворотной</label>
+                                    <input type="radio" name="brand" id="2stv_1pov_1pov_otk" data-img='2stv_1pov_1pov_otk.jpg' data-stv-count=3>
+                                    <label for="2stv_2pov_otk">Двухстворчатое с двумя поворотно-откидными</label>
+                                    <input type="radio" name="brand" id="2stv_2pov_otk" data-img='2stv_2pov_otk.jpg' data-stv-count=4>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="3stv">
+                            <div class="brand-wrap">
+                                <div class="brand">
+                                    <label for="3stv_gl">Трехстворчатое глухое</label>
+                                    <input type="radio" name="brand" id="3stv_gl" data-img='3stv_gl.jpg' data-stv-count=0>
+                                    <label for="3stv_1pov_otk">Трехстворчатое с одной поворотно-откидной</label>
+                                    <input type="radio" name="brand" id="3stv_1pov_otk" data-img='3stv_1pov_otk.jpg' data-stv-count=2>
+                                    <label for="3stv_1pov_1pov_otk">Трехстворчатое с одной поворотно-откидной и одной
+                                        поворотной</label>
+                                    <input type="radio" name="brand" id="3stv_1pov_1pov_otk" data-img='3stv_1pov_1pov_otk.jpg' data-stv-count=3>
+                                    <label for="3stv_2pov_otk">Трехстворчатое с двумя поворотно откидными</label>
+                                    <input type="radio" name="brand" id="3stv_2pov_otk" data-img='3stv_2pov_otk.jpg' data-stv-count=4>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b_bl">
+                            <div class="brand-wrap">
+                                <div class="brand">
+                                    <label for="b_bl_gl">Балконный блок с глухим окном</label>
+                                    <input type="radio" name="brand" id="b_bl_gl" data-img='b_bl_gl.png' data-stv-count=2>
+                                    <label for="b_bl_pov_otk">Балконный блок с поворотно-откидным окном</label>
+                                    <input type="radio" name="brand" id="b_bl_pov_otk" data-img='b_bl_pov_otk.png' data-stv-count=4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table style="border-collapse: collapse;" id="table_prices">
+                            <tr>
+                                <td><label for="izd">Изделие:</label></td>
+                                <td><input class="input_prices" type="text" id="izd" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="podokonnik2">Подоконник:</label></td>
+                                <td><input class="input_prices" type="text" id="podokonnik2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="otliv2">Отлив:</label></td>
+                                <td><input class="input_prices" type="text" id="otliv2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="mosk2">Москитная сетка:</label></td>
+                                <td><input class="input_prices" type="text" id="mosk2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="montazh2">Монтаж:</label></td>
+                                <td><input class="input_prices" type="text" id="montazh2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="otkosy2">Откосы:</label></td>
+                                <td><input class="input_prices" type="text" id="otkosy2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr>
+                                <td><label for="laminat2">Ламинация:</label></td>
+                                <td><input class="input_prices" type="text" id="laminat2" readonly></td>
+                                <td><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                            <tr style="background: #f90;;">
+                                <td style="padding-left: 5px;"><label class="total_price" for="total_price">Итого:</label></td>
+                                <td><input class="input_prices total_price" type="text" id="total_price" readonly></td>
+                                <td style="padding-right: 5px;"><span class="input_prices"> BYN</span><br></td>
+                            </tr>
+                        </table>
+                        <a class = "fancybox-window" href="#popup-form-window"><button class="order_button" onclick="prepare_window_data();">Заказать</button></a>
                     </div>
                 </div>
             </div>
-            <div id="tabs-2">
-                <div class="brand-wrap">
-                    <div class="brand">
-                        <label for="2stv_gl">Двухстворчатое глухое</label>
-                        <input type="radio" name="brand" id="2stv_gl" data-background-color="#0769AD"
-                               data-color="#7ACEF4"
-                               data-background-image="url(images/jquery.png)">
-                        <label for="2stv_1pov_otk">Двухстворчатое с одной поворотно-откидной</label>
-                        <input type="radio" name="brand" id="2stv_1pov_otk" data-background-color="#B24926"
-                               data-color="#FAA523"
-                               data-background-image="url(images/jquery-ui.png)">
-                        <label for="2stv_1pov_1pov_otk">Двухстворчатое с одной поворотно-откидной и одной
-                            поворотной</label>
-                        <input type="radio" name="brand" id="2stv_1pov_1pov_otk" data-background-color="#108040"
-                               data-color="#3EB249"
-                               data-background-image="url(images/jquery-mobile.png)">
-                        <label for="2stv_2pov_otk">Двухстворчатое с двумя поворотно-откидными</label>
-                        <input type="radio" name="brand" id="2stv_2pov_otk" data-background-color="#108040"
-                               data-color="#3EB249"
-                               data-background-image="url(images/jquery-mobile.png)">
+
+            <div class="win_img_and_sliders">
+                <div>
+                    <div class="sliders_d" style="justify-content: center;">
+                        <p class="win_width_text">
+                            <label for="amount_h_b_bl">Ширина окна:</label>
+                            <input class="input_prices sizes" type="text" id="amount_h_b_bl" readonly>
+                        </p>
+                        <div id="slider_h_b_bl"></div>
+                    </div>
+    
+                    <div style="display: flex;">
+                        <div class="sliders_win">
+                            <p class="height-win-div">
+                                <input class="input_prices sizes" type="text" id="amount2" readonly>
+                                <label class="vert-text" for="amount2">Высота окна:</label>
+                            </p>
+                            <div id="slider-vertical"></div>
+                        </div>
+    
+                        <div class="sliders_d">
+                            <p class="height-win-div">
+                                <input class="input_prices sizes" type="text" id="amount_v_b_bl_d" readonly>
+                                <label class="vert-text" for="amount_v_b_bl_d">Высота двери:</label>
+                            </p>
+                            <div id="slider_v_b_bl_d"></div>
+                        </div>
+    
+                        <div id="windows_div"></div>
+    
+                        <div class="sliders_d" id="slider_v_b_bl_div">
+                            <p class="height-win-div" style="width: 66px;">
+                                <input class="input_prices sizes" type="text" id="amount_v_b_bl" readonly>
+                                <label class="vert-text" for="amount_v_b_bl">Высота окна:</label>
+                            </p>
+                            <div id="slider_v_b_bl"></div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="sliders_win" id="win_width">
+                        <p class="win_width_text">
+                            <label for="amount">Ширина окна:</label>
+                            <input class="input_prices sizes" type="text" id="amount" readonly>
+                        </p>
+                        <div id="slider"></div>
+                    </div>
+    
+                    <div class="sliders_d" id="win_width_d">
+                        <p class="win_width_text">
+                            <label for="amount_h_b_bl_d">Ширина двери:</label>
+                            <input class="input_prices sizes" type="text" id="amount_h_b_bl_d" readonly>
+                        </p>
+                        <div id="slider_h_b_bl_d"></div>
                     </div>
                 </div>
             </div>
-            <div id="tabs-3">
-                <div class="brand-wrap">
-                    <div class="brand">
-                        <label for="3stv_gl">Трехстворчатое глухое</label>
-                        <input type="radio" name="brand" id="3stv_gl" data-background-color="#0769AD"
-                               data-color="#7ACEF4"
-                               data-background-image="url(images/jquery.png)">
-                        <label for="3stv_1pov_otk">Трехстворчатое с одной поворотно-откидной</label>
-                        <input type="radio" name="brand" id="3stv_1pov_otk" data-background-color="#B24926"
-                               data-color="#FAA523"
-                               data-background-image="url(images/jquery-ui.png)">
-                        <label for="3stv_1pov_1pov_otk">Трехстворчатое с одной поворотно-откидной и одной
-                            поворотной</label>
-                        <input type="radio" name="brand" id="3stv_1pov_1pov_otk" data-background-color="#108040"
-                               data-color="#3EB249"
-                               data-background-image="url(images/jquery-mobile.png)">
-                        <label for="3stv_2pov_otk">Трехстворчатое с двумя поворотно откидными</label>
-                        <input type="radio" name="brand" id="3stv_2pov_otk" data-background-color="#108040"
-                               data-color="#3EB249"
-                               data-background-image="url(images/jquery-mobile.png)">
+            <div id="options">
+                <div class="toggle-wrap">
+                    <div id="toggles1" class="toggles">
+                        <label for="montazh">Монтаж</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="montazh" id="montazh">
+                        <label for="otkosy">Откосы</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="otkosy" id="otkosy">
+                        <label for="mosk">Москитная сетка</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="mosk" id="mosk">
+                        <label for="podokonnik">Подоконник</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="podokonnik" id="podokonnik">
+                        <label for="otliv">Отлив</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="otliv" id="otliv">
+                        <label for="laminat">Ламинация</label>
+                        <input class="toggle brand-toggle" type="checkbox" name="laminat" id="laminat">
                     </div>
                 </div>
+                <fieldset class="furnitura">
+                    <legend>Фурнитура: </legend>
+                    <label for="f_type_1">Kale</label>
+                    <input type="radio" name="furnitura" id="f_type_1" data-furnitura-price = 0 checked>
+                    <label for="f_type_2">Roto</label>
+                    <input type="radio" name="furnitura" id="f_type_2" data-furnitura-price = 17>
+                </fieldset>
+                <fieldset class="steklopaket">
+                    <legend>Стеклопакет: </legend>
+                    <label for="s_type_1">24</label>
+                    <input type="radio" name="steklopaket" id="s_type_1" data-steklopaket-price = 0 checked>
+                    <label for="s_type_2">24 + i</label>
+                    <input type="radio" name="steklopaket" id="s_type_2" data-steklopaket-price = 10>
+                    <label for="s_type_3">32</label>
+                    <input type="radio" name="steklopaket" id="s_type_3" data-steklopaket-price = 20>
+                    <label for="s_type_4">32 + i</label>
+                    <input type="radio" name="steklopaket" id="s_type_4" data-steklopaket-price = 30>
+                    <label for="s_type_5">40мм + 2i + аргон</label>
+                    <input type="radio" name="steklopaket" id="s_type_5" data-steklopaket-price = 40>
+                </fieldset>
+                <fieldset class="profil">
+                    <legend>Профиль: </legend>
+                    <label for="p_type_1">Proplex Litex</label>
+                    <input type="radio" name="profil" id="p_type_1" data-profil-price = 0 checked>
+                    <label for="p_type_2">Proplex Optima</label>
+                    <input type="radio" name="profil" id="p_type_2" data-profil-price = 5>
+                    <label for="p_type_3">Proplex Comfort</label>
+                    <input type="radio" name="profil" id="p_type_3" data-profil-price = 10>
+                    <label for="p_type_4">KBE 70GT Plus</label>
+                    <input type="radio" name="profil" id="p_type_4" data-profil-price = 15>
+                    <label for="p_type_5">KBE System 70</label>
+                    <input type="radio" name="profil" id="p_type_5" data-profil-price = 20>
+                    <label for="p_type_6">Salamander Streamline</label>
+                    <input type="radio" name="profil" id="p_type_6" data-profil-price = 25>
+                </fieldset>
             </div>
-        </div>
-        <div>
-            <div class="toggle-wrap">
-                <div class="toggles">
-                    <label for="montazh">Монтаж</label>
-                    <input class="toggle brand-toggle" type="checkbox" name="montazh" id="montazh">
-                    <label for="otkosy">Откосы</label>
-                    <input class="toggle brand-toggle" type="checkbox" name="otkosy" id="otkosy">
-                    <label for="mosk_setka">Москитная сетка</label>
-                    <input class="toggle brand-toggle" type="checkbox" name="mosk_setka" id="mosk_setka">
-                </div>
-            </div>
-            <p>
-                <label for="izd">Изделие:</label>
-                <input class="input_prices" type="text" id="izd" readonly>
-                <span class="input_prices"> BYN</span><br>
-                <label for="montazh2">Монтаж:</label>
-                <input class="input_prices" type="text" id="montazh2" readonly>
-                <span class="input_prices"> BYN</span><br>
-                <label for="otkosy2">Откосы:</label>
-                <input class="input_prices" type="text" id="otkosy2" readonly>
-                <span class="input_prices"> BYN</span><br>
-                <label for="mosk2">Москитная сетка:</label>
-                <input class="input_prices" type="text" id="mosk2" readonly>
-                <span class="input_prices"> BYN</span><br>
-                <label class="total_price" for="total_price">Общая стоимость:</label>
-                <input class="input_prices total_price" type="text" id="total_price" readonly>
-                <span class="input_prices total_price"> BYN</span><br>
-            </p>
         </div>
     </div>
+</section>
 
-
-    <div style="padding: 20px;border: 2px solid;margin: 0 47px;">
-        <div style="display: flex;">
-            <div style="display: flex;flex-direction: row;align-items: center;">
-                <p style="display: flex;flex-direction: column;width: 111px;align-items: center;">
-                    <label for="amount2">Высота окна:</label>
-                    <input class="input_prices sizes" type="text" id="amount2" readonly>
-                </p>
-                <div id="slider-vertical" style="height: 300px;margin-right: 20px;"></div>
-            </div>
-            <div id="windows_div"></div>
-        </div>
-        <div id="win_width" style="display: flex;flex-direction: column-reverse;margin-top: 20px;margin-left: 144px;">
-            <p id="win_width_text" style="display: flex;flex-direction: column;align-items: center;">
-                <label for="amount">Ширина окна:</label>
-                <input class="input_prices sizes" type="text" id="amount" readonly>
-            </p>
-            <div id="slider"></div>
-        </div>
-    </div>
-</div>
-
-<form id="form">
-    <input type="text" name="name" required="required"/>
-    <input type="text" name="phone" required="required"/>
-    <input type="submit" value="Заказать звонок"/>
-</form>
 
 
 </body>
